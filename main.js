@@ -7,7 +7,7 @@ class WebsocketInstance extends InstanceBase {
 	isInitialized = false
 
 	subscriptions = new Map()
-	wsRegex = '^wss?:\\/\\/([\\da-z\\.-]+)(:\\d{1,5})?(?:\\/(.*))?$'
+	wsRegex = '^wss?:\/\/(?:[a-zA-Z0-9.-]+@)?([a-zA-Z0-9.-]+)(:\d{1,5})?(?:\/(.*))?$'
 
 	async init(config) {
 		this.config = config
